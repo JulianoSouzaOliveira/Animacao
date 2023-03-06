@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="br">
+<html lang="br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous">
+</head>
+<body>
+<div style="bottom:80px">
+    <table class="table" method>
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Capitulo</th>
+            <th scope="col">Temporada</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Deletar</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="lista, id : ${listas}">
+                <td data-th-text="${id.count}"></td>
+                <td data-th-text="${lista.nome}"></td>
+                <td data-th-text="${lista.capitulos}"></td>
+                <td data-th-text="${lista.temporadas}"></td>
+                <td>
+                    <a th:href="@{'/edit/'+${lista.id}}">Editar</a>
+                </td>
+                <td>
+                    <a th:href="@{'/delete/'+${lista.id}}">Deletar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

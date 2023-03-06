@@ -1,0 +1,21 @@
+.cadastro{
+    border-style: double;
+    border-width: 3px;
+    border-color: black;
+    padding:50px;
+    margin:200px auto;
+    width:200px;
+}
+
+.botao{
+    margin-bottom:10px;
+}
+
+.tabela{
+    border-style: double;
+    border-width: 3px;
+    border-color: black;
+    padding:80px;
+    margin: 200px auto;
+    width: 400px;
+}
